@@ -1,22 +1,35 @@
 <script setup>
-import HelloWorld from "./components/HelloWorld.vue";
 </script>
 
 <template>
+  <div id="nav">
+    <div id="logo-fake">My Fake Store</div>
+    <router-link to="/">Home</router-link> -
+    <router-link to="/carrinho">Carrinho (0)</router-link>
+  </div>
   <RouterView />
 </template>
 
 <style scoped>
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+#nav {
+  padding: 16px 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  background-color: rgb(37, 37, 37);
+  color: white;
+  box-shadow: 2px 2px 5px #9c9a9a;
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+
+a {
+  color: white;
+  text-decoration: none;
 }
-.logo.vue:hover {
-  filter: drop-shadow(0 0 2em #42b883aa);
+
+.router-link-exact-active {
+  color: #007bff;
 }
 </style>
